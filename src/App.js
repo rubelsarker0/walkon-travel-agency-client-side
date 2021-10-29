@@ -7,6 +7,7 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import Register from './components/Register/Register';
+import AddDestination from './components/AddDestination/AddDestination';
 import PrivateRoute, {
 	AuthenticationPrivateRoute,
 } from './components/PrivateRoute/PrivateRoute';
@@ -28,6 +29,9 @@ function App() {
 					</AuthenticationPrivateRoute>
 					<Route path="/account/register">
 						<Register></Register>
+					</Route>
+					<Route path="/create/destination">
+						<AddDestination></AddDestination>
 					</Route>
 					<Route path="*">
 						<NotFound></NotFound>
