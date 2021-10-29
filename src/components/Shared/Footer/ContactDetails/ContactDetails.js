@@ -13,7 +13,7 @@ const ContactDetails = () => {
 		<Col className="ps-5">
 			<div className="ms-5">
 				<h5 className="">Contact Details</h5>
-				<hr className="text-info w-50 p-1" />
+				<hr className="generic-text-color w-50 p-1" />
 				<p>
 					<FontAwesomeIcon
 						className="fa-1x generic-icon-color me-3"

@@ -27,3 +27,7 @@ code {
 .generic-icon-color {
 	color: rgb(108 99 255) !important;
 }
+
+.text-alignment {
+	text-align: justify !important;
+}

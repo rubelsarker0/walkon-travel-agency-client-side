@@ -4,21 +4,41 @@ import travelImage from '../../../assets/images/banner-img.svg';
 import './DestinationCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faUsers } from '@fortawesome/free-solid-svg-icons';
-const TravelDestinationCard = () => {
+import { useHistory } from 'react-router';
+const TravelDestinationCard = (props) => {
+	const {
+		_id,
+		travelPlace,
+		title,
+		description,
+		duration,
+		groupSize,
+		bookingPrice,
+		destinationUrl,
+		travelTime,
+	} = props.destination;
+
+	const history = useHistory();
+	const handleBookNowButton = () => {
+		history.push(`/destination/booking/${_id}`);
+	};
+
 	return (
 		<Col>
-			<Card className="p-0 border-0 shadow">
-				<Card.Img variant="top" className="img-fluid" src={travelImage} />
+			<Card className="p-0 h-100 border-0 shadow">
+				<Card.Img
+					variant="top"
+					className="img-fluid"
+					src={destinationUrl}
+					style={{ height: '250px' }}
+				/>
 				<Card.Body className="position-relative">
 					<h6 className="travel-destination-name generic-bg-color text-white fw-bold py-2 px-3 ms-1 rounded">
-						America
+						{travelPlace}
 					</h6>
-					<Card.Title className="fs-5 ">
-						Holiday Planners is a World Leading Online Tour Booking Platform
-					</Card.Title>
+					<Card.Title className="fs-5 ">{title}</Card.Title>
 					<Card.Text className="text-secondary">
-						Some quick example text to build on the card title and make up the
-						bulk of the card's content.
+						{description.slice(0, 100)}
 					</Card.Text>
 					<hr />
 					<Row>
@@ -30,7 +50,7 @@ const TravelDestinationCard = () => {
 								/>
 								<div>
 									<div>Group Size</div>
-									<div className="text-secondary">10 Peoples</div>
+									<div className="text-secondary">{groupSize} Peoples</div>
 								</div>
 							</div>
 						</Col>
@@ -42,7 +62,7 @@ const TravelDestinationCard = () => {
 								/>
 								<div>
 									<div>Duration</div>
-									<div className="text-secondary">9 Days 10 hours</div>
+									<div className="text-secondary">{duration}</div>
 								</div>
 							</div>
 						</Col>
@@ -51,9 +71,11 @@ const TravelDestinationCard = () => {
 
 				<Card.Footer>
 					<div className="d-flex align-items-center justify-content-between">
-						<Button className="generic-btn-color">BOOK NOW</Button>
+						<Button onClick={handleBookNowButton} className="generic-btn-color">
+							BOOK NOW
+						</Button>
 						<h3 className="fw-bold" style={{ color: 'rgb(39 207 207)' }}>
-							$525
+							{bookingPrice}
 						</h3>
 					</div>
 				</Card.Footer>

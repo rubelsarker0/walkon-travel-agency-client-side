@@ -1,8 +1,18 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Card, Container, Row } from 'react-bootstrap';
 import DestinationCard from '../DestinationCard/DestinationCard';
 
 const Destination = () => {
+	const [destinations, setDestinations] = useState([]);
+
+	useEffect(() => {
+		axios
+			.get('http://localhost:5000/api/destinations')
+			.then((res) => setDestinations(res.data))
+			.catch((error) => console.log(error));
+	}, []);
+
 	return (
 		<section className="py-5 bg-light">
 			<Container>
@@ -12,11 +22,16 @@ const Destination = () => {
 						Trending, Best Selling Tours And Fun Destinations
 					</p>
 				</div>
-				<Row lg={3} md={2} xs={1}>
-					<DestinationCard></DestinationCard>
-					<DestinationCard></DestinationCard>
-					<DestinationCard></DestinationCard>
-				</Row>
+				{destinations && (
+					<Row lg={3} md={2} xs={1} className="g-4 py-4">
+						{destinations.map((destination) => (
+							<DestinationCard
+								key={destination._id}
+								destination={destination}
+							></DestinationCard>
+						))}
+					</Row>
+				)}
 			</Container>
 		</section>
 	);
