@@ -14,6 +14,9 @@ const Banner = () => {
 			<Container>
 				<Row lg={2} xs={1} className="g-5">
 					<Col>
+						<img className="w-100" src={bannerImg} alt="" />
+					</Col>
+					<Col>
 						<div className="bg-light rounded p-5 h-auto">
 							<h1 className="regular-text-color mb-5">
 								Eat, Sleep, And Travel, Explore Mysterious Places With Us
@@ -32,9 +35,6 @@ const Banner = () => {
 								Contact Us
 							</Button>
 						</div>
-					</Col>
-					<Col>
-						<img className="w-100" src={bannerImg} alt="" />
 					</Col>
 				</Row>
 			</Container>
