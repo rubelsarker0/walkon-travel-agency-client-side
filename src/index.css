@@ -10,3 +10,20 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+.generic-btn-color {
+	background-color: rgb(39 207 207) !important;
+	border: none !important;
+}
+
+.generic-bg-color {
+	background-color: rgb(108 99 255) !important;
+}
+
+.generic-text-color {
+	color: rgb(108 99 255) !important;
+}
+
+.generic-icon-color {
+	color: rgb(108 99 255) !important;
+}

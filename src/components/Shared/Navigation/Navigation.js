@@ -14,7 +14,7 @@ const Navigation = () => {
 	};
 	return (
 		<>
-			<Navbar bg="light" expand="lg">
+			<Navbar expand="lg">
 				<Container>
 					<img
 						className="img-fluid"

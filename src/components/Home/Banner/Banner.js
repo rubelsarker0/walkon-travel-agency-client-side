@@ -18,7 +18,7 @@ const Banner = () => {
 					</Col>
 					<Col>
 						<div className="bg-light rounded p-5 h-auto">
-							<h1 className="regular-text-color mb-5">
+							<h1 className="generic-text-color mb-5">
 								Eat, Sleep, And Travel, Explore Mysterious Places With Us
 							</h1>
 							<p className="text-secondary mb-5">

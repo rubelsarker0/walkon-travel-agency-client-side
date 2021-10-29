@@ -10,7 +10,7 @@ const TravelDestinationCard = () => {
 			<Card className="p-0 border-0 shadow">
 				<Card.Img variant="top" className="img-fluid" src={travelImage} />
 				<Card.Body className="position-relative">
-					<h6 className="travel-destination-name bg-warning text-white fw-bold py-2 px-3 ms-1 rounded">
+					<h6 className="travel-destination-name generic-bg-color text-white fw-bold py-2 px-3 ms-1 rounded">
 						America
 					</h6>
 					<Card.Title className="fs-5 ">
@@ -25,19 +25,7 @@ const TravelDestinationCard = () => {
 						<Col>
 							<div className="d-flex align-items-center ">
 								<FontAwesomeIcon
-									className="fa-2x text-info me-1"
-									icon={faClock}
-								/>
-								<div>
-									<div>Duration</div>
-									<div className="text-secondary">9 Days 10 hours</div>
-								</div>
-							</div>
-						</Col>
-						<Col>
-							<div className="d-flex align-items-center ">
-								<FontAwesomeIcon
-									className="fa-2x text-info me-1"
+									className="fa-2x generic-icon-color me-1"
 									icon={faUsers}
 								/>
 								<div>
@@ -46,13 +34,27 @@ const TravelDestinationCard = () => {
 								</div>
 							</div>
 						</Col>
+						<Col>
+							<div className="d-flex align-items-center ">
+								<FontAwesomeIcon
+									className="fa-2x generic-icon-color me-1"
+									icon={faClock}
+								/>
+								<div>
+									<div>Duration</div>
+									<div className="text-secondary">9 Days 10 hours</div>
+								</div>
+							</div>
+						</Col>
 					</Row>
 				</Card.Body>
 
 				<Card.Footer>
 					<div className="d-flex align-items-center justify-content-between">
-						<h3 className="text-danger fw-bold">$525</h3>
-						<Button variant="success">BOOK NOW</Button>
+						<Button className="generic-btn-color">BOOK NOW</Button>
+						<h3 className="fw-bold" style={{ color: 'rgb(39 207 207)' }}>
+							$525
+						</h3>
 					</div>
 				</Card.Footer>
 			</Card>

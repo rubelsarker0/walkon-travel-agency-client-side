@@ -16,28 +16,28 @@ const ContactDetails = () => {
 				<hr className="text-info w-50 p-1" />
 				<p>
 					<FontAwesomeIcon
-						className="fa-1x footer-icon-color me-3"
+						className="fa-1x generic-icon-color me-3"
 						icon={faLocationArrow}
 					/>
 					732 Despard St, Atlanta
 				</p>
 				<p>
 					<FontAwesomeIcon
-						className="fa-1x footer-icon-color me-3"
+						className="fa-1x generic-icon-color me-3"
 						icon={faEnvelopeOpen}
 					/>
 					support@walkon.com
 				</p>
 				<p>
 					<FontAwesomeIcon
-						className="fa-1x footer-icon-color me-3"
+						className="fa-1x generic-icon-color me-3"
 						icon={faClock}
 					/>
 					09.00 - 17.00
 				</p>
 				<p>
 					<FontAwesomeIcon
-						className="fa-1x footer-icon-color me-3"
+						className="fa-1x generic-icon-color me-3"
 						icon={faPhoneAlt}
 					/>
 					+1 234 567 890

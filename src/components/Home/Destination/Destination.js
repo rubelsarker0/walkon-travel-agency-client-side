@@ -7,7 +7,7 @@ const Destination = () => {
 		<section className="py-5 bg-light">
 			<Container>
 				<div className="text-center">
-					<h1>Amazing Tours</h1>
+					<h1 className="generic-text-color">OUR DESTINATION</h1>
 					<p className="text-secondary">
 						Trending, Best Selling Tours And Fun Destinations
 					</p>

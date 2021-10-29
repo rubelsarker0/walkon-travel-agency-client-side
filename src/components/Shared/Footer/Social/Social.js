@@ -29,7 +29,7 @@ const Social = () => {
 					href="https://www.facebook.com/rubelsarker8"
 				>
 					<FontAwesomeIcon
-						className="fa-2x me-3 footer-icon-color"
+						className="fa-2x me-3 generic-icon-color"
 						icon={faFacebook}
 					/>
 				</a>
@@ -39,7 +39,7 @@ const Social = () => {
 					href="https://www.facebook.com/rubelsarker8"
 				>
 					<FontAwesomeIcon
-						className="fa-2x me-3 footer-icon-color"
+						className="fa-2x me-3 generic-icon-color"
 						icon={faTwitter}
 					/>
 				</a>
@@ -49,7 +49,7 @@ const Social = () => {
 					href="https://www.facebook.com/rubelsarker8"
 				>
 					<FontAwesomeIcon
-						className="fa-2x me-3 footer-icon-color"
+						className="fa-2x me-3 generic-icon-color"
 						icon={faYoutube}
 					/>
 				</a>
@@ -59,7 +59,7 @@ const Social = () => {
 					href="https://www.facebook.com/rubelsarker8"
 				>
 					<FontAwesomeIcon
-						className="fa-2x footer-icon-color"
+						className="fa-2x generic-icon-color"
 						icon={faInstagram}
 					/>
 				</a>
