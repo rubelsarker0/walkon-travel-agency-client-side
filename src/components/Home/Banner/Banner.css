@@ -1,0 +1,8 @@
+.top-banner {
+	background: rgb(39 207 207);
+}
+
+.rounded-pill {
+	background-color: rgb(39 207 207) !important;
+	border: none !important;
+}
