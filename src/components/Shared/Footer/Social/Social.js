@@ -18,9 +18,10 @@ const Social = () => {
 				style={{ height: '37px', width: '205px' }}
 			/>
 			<p className="text-white my-3 text-format">
-				High-quality health care helps prevent diseases and improve quality of
-				life. Healthy People 2030 focuses on improving health care quality and
-				making sure all people get the health care services they need.
+				Walko is a rapidly-growing global online travel agency, walko is here to
+				help you plan the perfect trip. Whether you're going on holiday, taking
+				a business trip, or looking to set up a corporate travel account, walko
+				is here to help you.
 			</p>
 			<div>
 				<a
