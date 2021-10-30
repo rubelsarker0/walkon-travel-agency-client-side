@@ -1,7 +1,5 @@
 import React from 'react';
 import { Card, Button, Col, Row } from 'react-bootstrap';
-import travelImage from '../../../assets/images/banner-img.svg';
-import './DestinationCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
@@ -25,7 +23,7 @@ const TravelDestinationCard = (props) => {
 
 	return (
 		<Col>
-			<Card className="p-0 h-100 border-0 shadow">
+			<Card className="p-0 h-100 border-0 border-bottom border-primary shadow">
 				<Card.Img
 					variant="top"
 					className="img-fluid"
@@ -33,9 +31,9 @@ const TravelDestinationCard = (props) => {
 					style={{ height: '250px' }}
 				/>
 				<Card.Body className="position-relative">
-					<h6 className="travel-destination-name generic-bg-color text-white fw-bold py-2 px-3 ms-1 rounded">
+					{/* <h6 className="travel-destination-name generic-bg-color text-white fw-bold py-2 px-3 ms-1 rounded">
 						{travelPlace}
-					</h6>
+					</h6> */}
 					<Card.Title className="fs-5 ">{title}</Card.Title>
 					<Card.Text className="text-secondary">
 						{description.slice(0, 100)}
@@ -75,7 +73,7 @@ const TravelDestinationCard = (props) => {
 							BOOK NOW
 						</Button>
 						<h3 className="fw-bold" style={{ color: 'rgb(39 207 207)' }}>
-							{bookingPrice}
+							{`$${bookingPrice}`}
 						</h3>
 					</div>
 				</Card.Footer>
