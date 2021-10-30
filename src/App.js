@@ -11,6 +11,7 @@ import AddDestination from './components/AddDestination/AddDestination';
 import PrivateRoute, {
 	AuthenticationPrivateRoute,
 } from './components/PrivateRoute/PrivateRoute';
+import Booking from './components/Booking/Booking';
 
 function App() {
 	return (
@@ -30,9 +31,12 @@ function App() {
 					<Route path="/account/register">
 						<Register></Register>
 					</Route>
-					<Route path="/create/destination">
+					<PrivateRoute path="/create/destination">
 						<AddDestination></AddDestination>
-					</Route>
+					</PrivateRoute>
+					<PrivateRoute path="/destination/booking/:id">
+						<Booking></Booking>
+					</PrivateRoute>
 					<Route path="*">
 						<NotFound></NotFound>
 					</Route>

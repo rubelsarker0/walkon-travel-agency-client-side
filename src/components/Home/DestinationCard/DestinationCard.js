@@ -3,6 +3,7 @@ import { Card, Button, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
+
 const TravelDestinationCard = (props) => {
 	const {
 		_id,
@@ -31,9 +32,6 @@ const TravelDestinationCard = (props) => {
 					style={{ height: '250px' }}
 				/>
 				<Card.Body className="position-relative">
-					{/* <h6 className="travel-destination-name generic-bg-color text-white fw-bold py-2 px-3 ms-1 rounded">
-						{travelPlace}
-					</h6> */}
 					<Card.Title className="fs-5 ">{title}</Card.Title>
 					<Card.Text className="text-secondary">
 						{description.slice(0, 100)}
