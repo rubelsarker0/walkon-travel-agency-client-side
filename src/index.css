@@ -27,6 +27,13 @@ code {
 .generic-icon-color {
 	color: rgb(108 99 255) !important;
 }
+.generic-icon-color2 {
+	color: rgb(39 207 207) !important;
+}
+
+.generic-text-color2 {
+	color: rgb(39 207 207) !important;
+}
 
 .text-alignment {
 	text-align: justify !important;

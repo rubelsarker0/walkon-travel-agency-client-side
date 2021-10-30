@@ -16,7 +16,7 @@ const NotFound = () => {
 				<div className="pt-5">
 					<Button
 						onClick={handleGoBack}
-						className="btn-login rounded-pill px-5 fw-bold 5 mt-3"
+						className=" generic-btn-color btn-login rounded px-5 fw-bold 5 mt-3"
 					>
 						Go back
 					</Button>

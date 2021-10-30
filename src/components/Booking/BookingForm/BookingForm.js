@@ -50,10 +50,9 @@ const BookingForm = ({ destination }) => {
 				className=" mx-auto p-3 w-100 border-0 shadow-lg rounded position-lg-absolute "
 				style={{ top: '-100px' }}
 			>
-				<h3 className="text-orange text-center mb-4">
-					Place Your Booking Order
+				<h3 className="generic-icon-color2 text-center mb-4">
+					Book your Order now!!
 				</h3>
-				<p className="text-secondary text-center">Happy Journey</p>
 				<Form onSubmit={handleBooking}>
 					<Form.Group className="mb-3" controlId="email">
 						<Form.Label>Email</Form.Label>
@@ -72,7 +71,7 @@ const BookingForm = ({ destination }) => {
 						<Form.Control
 							ref={NameRef}
 							type="text"
-							placeholder="Booking name"
+							placeholder="Name"
 							required
 						/>
 					</Form.Group>
@@ -81,7 +80,7 @@ const BookingForm = ({ destination }) => {
 						<Form.Control
 							type="text"
 							ref={phoneRef}
-							placeholder="Phone Number"
+							placeholder="Number"
 							required
 						/>
 					</Form.Group>
@@ -100,12 +99,12 @@ const BookingForm = ({ destination }) => {
 							ref={messageRef}
 							as="textarea"
 							rows={3}
-							placeholder="write your message"
+							placeholder="Got a question? send us a message"
 						/>
 					</Form.Group>
 
 					<div className="text-center">
-						<Button variant="success" className="w-100 mx-auto" type="submit">
+						<Button className=" generic-btn-color w-100 mx-auto" type="submit">
 							Book Tour
 						</Button>
 					</div>

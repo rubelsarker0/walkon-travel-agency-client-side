@@ -27,7 +27,7 @@ const Navigation = () => {
 						<Nav className=" fw-bold">
 							<NavLink
 								exact
-								activeClassName="text-info"
+								activeClassName="generic-text-color2"
 								className="nav-link"
 								to="/home"
 							>
@@ -35,7 +35,7 @@ const Navigation = () => {
 							</NavLink>
 							<NavLink
 								exact
-								activeClassName="text-info"
+								activeClassName="generic-text-color2"
 								className="nav-link"
 								to="/about"
 							>
@@ -43,7 +43,7 @@ const Navigation = () => {
 							</NavLink>
 							<NavLink
 								exact
-								activeClassName="text-info"
+								activeClassName="generic-text-color2"
 								className="nav-link"
 								to="/services"
 							>
@@ -51,7 +51,7 @@ const Navigation = () => {
 							</NavLink>
 							<NavLink
 								exact
-								activeClassName="text-info"
+								activeClassName="generic-text-color2"
 								className="nav-link"
 								to="/create/destination"
 							>
@@ -62,8 +62,7 @@ const Navigation = () => {
 						{user ? (
 							<Button
 								onClick={logOut}
-								variant="danger"
-								className="rounded-pill ms-auto me-2 px-5 fw-bold"
+								className="rounded generic-btn-color ms-auto me-2 px-5 fw-bold"
 							>
 								Logout
 							</Button>

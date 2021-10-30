@@ -18,7 +18,7 @@ const Banner = () => {
 					</Col>
 					<Col>
 						<div className="bg-light rounded p-5 h-auto">
-							<h1 className="generic-text-color mb-5">
+							<h1 className="generic-text-color2 mb-5">
 								Eat, Sleep, And Travel, Explore Mysterious Places With Us
 							</h1>
 							<p className="text-secondary mb-5">
@@ -28,8 +28,7 @@ const Banner = () => {
 							</p>
 							<Button
 								onClick={handleContact}
-								variant="primary"
-								className="rounded-pill px-5"
+								className="generic-btn-color rounded px-5"
 								size="lg"
 							>
 								Contact Us

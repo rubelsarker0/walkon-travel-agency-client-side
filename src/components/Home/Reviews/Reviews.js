@@ -9,7 +9,7 @@ const Reviews = () => {
 		<section className="py-5 bg-light border-5">
 			<Container>
 				<div className="text-center">
-					<h1 className="fw-bold generic-text-color">
+					<h1 className="fw-bold generic-text-color2">
 						<i>Happy customers</i>
 						<hr className="mx-auto w-25 generic-text-color p-1" />
 					</h1>

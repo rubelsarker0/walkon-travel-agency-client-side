@@ -62,15 +62,13 @@ const Login = () => {
 					<Col className="w-lg-50 mx-auto w-sm-100">
 						<div className="rounded rounded-3 shadow-lg bg-light p-3 py-5 p-lg-4 py-xl-5">
 							<div className="text-center">
-								<img className="img-fluid" src={logo} alt="" />
-							</div>
-							<h2 className="text-navy mb-3 text-center">
-								<FontAwesomeIcon
-									className="fa-1x text-info me-3"
-									icon={faLock}
+								<img
+									className="img-fluid mb-3"
+									src={logo}
+									alt=""
+									style={{ height: '50px' }}
 								/>
-								Log In
-							</h2>
+							</div>
 							{error && <h3 className="text-danger text-center">{error}</h3>}
 							<Form onSubmit={handleEmailLogin}>
 								<Form.Group className="mb-3" controlId="formBasicEmail">
@@ -93,7 +91,7 @@ const Login = () => {
 								<Form.Group className="mb-3" controlId="formBasicCheckbox">
 									<Form.Check type="checkbox" label="Remember me" />
 								</Form.Group>
-								<Button className="w-100" variant="primary" type="submit">
+								<Button className=" generic-btn-color w-100" type="submit">
 									Log In
 								</Button>
 							</Form>
@@ -104,7 +102,7 @@ const Login = () => {
 								<Col>
 									<Button
 										onClick={signInGoogle}
-										variant="info"
+										variant="secondary"
 										className="w-100 text-white fw-bold"
 									>
 										<FontAwesomeIcon
@@ -117,7 +115,7 @@ const Login = () => {
 								<Col>
 									<Button
 										onClick={signInGithub}
-										variant="primary"
+										variant="secondary"
 										className="w-100 fw-bold"
 									>
 										<FontAwesomeIcon
@@ -129,7 +127,7 @@ const Login = () => {
 								</Col>
 							</Row>
 							<div className="text-center mt-3">
-								Don't have an account?{' '}
+								Don't have an account?
 								<Link to="/account/register">Register</Link>
 							</div>
 						</div>

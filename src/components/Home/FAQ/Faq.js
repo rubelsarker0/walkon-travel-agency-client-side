@@ -17,7 +17,7 @@ const FAQ = () => {
 			<Container>
 				<Row className="g-4">
 					<Col lg={12} xs={12}>
-						<h1 className="generic-text-color fw-bold">
+						<h1 className="generic-text-color2 fw-bold">
 							Frequently Asked Question
 						</h1>
 						<Accordion defaultActiveKey="0" className="mt-5">

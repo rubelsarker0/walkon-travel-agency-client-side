@@ -91,15 +91,13 @@ const Register = () => {
 					<Col className="w-lg-50 mx-auto w-sm-100">
 						<div className="rounded rounded-3 shadow-lg bg-light p-3 py-5 p-lg-4 py-xl-5">
 							<div className="text-center">
-								<img className="img-fluid" src={logo} alt="" />
-							</div>
-							<h2 className="text-navy mb-3 text-center">
-								<FontAwesomeIcon
-									className="fa-1x text-info me-3"
-									icon={faLock}
+								<img
+									className="img-fluid"
+									src={logo}
+									alt=""
+									style={{ height: '50px' }}
 								/>
-								Register
-							</h2>
+							</div>
 							<Form onSubmit={handleEmailRegistration}>
 								<Form.Group className="mb-3" controlId="formName">
 									<Form.Label>Your Name</Form.Label>
@@ -147,7 +145,7 @@ const Register = () => {
 								<Form.Group className="mb-3" controlId="formBasicCheckbox">
 									<Form.Check type="checkbox" label="Remember me" />
 								</Form.Group>
-								<Button className="w-100" variant="primary" type="submit">
+								<Button className=" generic-btn-color w-100" type="submit">
 									Register
 								</Button>
 							</Form>
@@ -158,7 +156,7 @@ const Register = () => {
 								<Col>
 									<Button
 										onClick={signInGoogle}
-										variant="info"
+										variant="secondary"
 										className="w-100 text-white fw-bold"
 									>
 										<FontAwesomeIcon
@@ -171,7 +169,7 @@ const Register = () => {
 								<Col>
 									<Button
 										onClick={signInGithub}
-										variant="primary"
+										variant="secondary"
 										className="w-100 fw-bold"
 									>
 										<FontAwesomeIcon

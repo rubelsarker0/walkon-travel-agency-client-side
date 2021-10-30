@@ -22,7 +22,7 @@ const ReviewCard = () => {
 					</Card.Text>
 					<div className="text-center">
 						<h5 className="fw-bold generic-text-color">Rubel Sarker</h5>
-						<h6 className="mb-5 text-info">Traveller</h6>
+						<h6 className="mb-5 generic-text-color2">Traveller</h6>
 						<img
 							style={{
 								bottom: '-45px',

@@ -52,9 +52,9 @@ const AddDestination = () => {
 	return (
 		<section className="my-5">
 			<Container>
-				<h1 className="generic-text-color text-center py-4 fw-bold">
+				<h1 className="generic-text-color2 text-center py-4 fw-bold">
 					Add Your Destination
-					<hr className="w-50 mx-auto p-1" />
+					<hr className="w-50 generic-text-color2 mx-auto p-1" />
 				</h1>
 				<Row lg={2} xs={1} className="g-5">
 					<Col>
