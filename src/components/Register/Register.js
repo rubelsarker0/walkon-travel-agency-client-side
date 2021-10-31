@@ -27,7 +27,6 @@ const Register = () => {
 		setLoading(true);
 		handleGoogleSignIn()
 			.then((result) => {
-				console.log(result.user);
 				history.push(location.state?.from || '/home');
 			})
 			.catch((error) => console.log(error.message))

@@ -40,13 +40,11 @@ const AddDestination = () => {
 		axios
 			.post('http://localhost:5000/api/create/destinations', newDestination)
 			.then((res) => {
-				console.log(res);
 				if (res.data.insertedId) {
 					alert('Successfully added a new destination');
 					e.target.reset();
 				}
 			});
-		console.log(newDestination);
 	};
 
 	return (

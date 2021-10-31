@@ -35,14 +35,12 @@ const BookingForm = ({ destination }) => {
 		axios
 			.post('http://localhost:5000/api/booking/newOrder', bookingData)
 			.then((res) => {
-				console.log(res.data);
 				if (res.data.insertedId) {
 					alert('Successfully Placed your booking order');
 					e.target.reset();
 				}
 			});
 	};
-	console.log(user);
 
 	return (
 		<section className="my-5 h-100 position-relative">
