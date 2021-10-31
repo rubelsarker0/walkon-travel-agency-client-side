@@ -4,7 +4,7 @@ import { Container, Table } from 'react-bootstrap';
 
 const ManageOrders = () => {
 	const [orders, setOrders] = useState([]);
-
+	const [reCall, setReCall] = useState(true);
 	useEffect(() => {
 		axios
 			.get(`http://localhost:5000/api/Orders`)
@@ -13,10 +13,23 @@ const ManageOrders = () => {
 				console.log(res.data);
 			})
 			.catch((err) => console.log(err));
-	}, []);
+	}, [reCall]);
 
-	const handleDelete = (id) => {
-		const isDelete = window.confirm('Are you sure for Delete your this order?');
+	const handleApproveOrder = (id) => {
+		axios
+			.put(`http://localhost:5000/api/order/update/status/${id}`)
+			.then((res) => {
+				console.log(res);
+				if (res.data.modifiedCount > 0) {
+					setReCall(!reCall);
+				}
+			})
+			.catch((err) => console.log(err));
+	};
+	const handleRemove = (id) => {
+		const isDelete = window.confirm(
+			'You are removing your order are you sure?'
+		);
 		if (isDelete) {
 			axios
 				.delete(`http://localhost:5000/api/order/delete/${id}`)
@@ -31,16 +44,16 @@ const ManageOrders = () => {
 		}
 	};
 
+	// /api/order/update/status/:id
+
 	return (
-		<section>
-			<div className="bg-primary py-5">
-				<Container>
-					<h1 className="text-white">My Booking</h1>
-				</Container>
-			</div>
+		<section style={{ minHeight: '600px' }}>
 			<Container className="my-5">
+				<h1 className="generic-text-color2 text-center py-3">
+					Manage your bookings
+				</h1>
 				{orders.length > 0 ? (
-					<Table className="rounded-3" striped bordered hover variant="dark">
+					<Table className="rounded-3" striped bordered hover variant="light">
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -53,41 +66,45 @@ const ManageOrders = () => {
 						</thead>
 						<tbody>
 							{orders.map((order) => (
-								<tr>
-									<td>
-										<img
-											width="50px"
-											className="rounded-circle bg-white"
-											src={order.author.photo}
-											alt=""
-										/>
-									</td>
-
+								<tr key={order._id}>
+									<td>{order.author.name}</td>
 									<td>{order.place}</td>
 									<td>{order.price}</td>
 									<td>{order.date}</td>
 									<td>
-										<div className="bg-warning  rounded fw-bold text-center">
+										<div
+											className={`bg-${
+												order.status === 'Approved' ? 'success' : 'warning'
+											} rounded fw-bold text-center`}
+										>
 											{order.status}
 										</div>
 									</td>
 									<td>
-										<div className="text-center">
-											<button
-												onClick={() => handleDelete(order._id)}
-												className="btn btn-sm btn-danger w-75"
-											>
-												Delete
-											</button>
-										</div>
+										<button
+											onClick={() => handleApproveOrder(order._id)}
+											className="btn btn-sm btn-primary w-50"
+											disabled={
+												order.status === 'Cancelled' ||
+												order.status === 'Approved'
+											}
+										>
+											Approve
+										</button>
+										<button
+											onClick={() => handleRemove(order._id)}
+											className="btn btn-sm btn-danger w-50"
+										>
+											REMOVE
+										</button>
 									</td>
 								</tr>
 							))}
 						</tbody>
 					</Table>
 				) : (
-					<h1 className="text-center fw-bold text-danger">
-						You have no order yet
+					<h1 className="text-center fw-bold generic-text-color">
+						No order found!!! Please place an order first.
 					</h1>
 				)}
 			</Container>

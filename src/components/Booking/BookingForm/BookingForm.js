@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
-import { Form, Button, Container, Card } from 'react-bootstrap';
+import { Form, Button, Card } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 const BookingForm = ({ destination }) => {

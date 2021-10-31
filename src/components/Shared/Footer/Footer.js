@@ -4,8 +4,18 @@ import Social from './Social/Social';
 import ContactDetails from './ContactDetails/ContactDetails';
 
 const Footer = () => {
+	const footerStyle = {
+		position: 'relative',
+		marginTop: '-180px',
+		height: '180px',
+		clear: 'both',
+	};
+
 	return (
-		<footer className="footer-bg bg-dark text-white py-5">
+		<footer
+			className="footer-bg bg-dark text-white py-5"
+			style={{ footerStyle }}
+		>
 			<Container>
 				<Row lg={2} xs={1} className="g-5 ms-auto">
 					<Social></Social>

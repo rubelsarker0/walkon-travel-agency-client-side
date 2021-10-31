@@ -7,17 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const Details = (props) => {
-	const {
-		_id,
-		travelPlace,
-		title,
-		description,
-		duration,
-		groupSize,
-		bookingPrice,
-		destinationUrl,
-		travelTime,
-	} = props.destination;
+	const { travelPlace, description, duration } = props.destination;
 	return (
 		<div className="py-5">
 			<h1 className="generic-icon-color2 mb-5">Overview</h1>

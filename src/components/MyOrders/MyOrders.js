@@ -34,22 +34,16 @@ const MyOrders = () => {
 	};
 
 	return (
-		<section>
-			<div className="bg-primary py-5">
-				<Container>
-					<h1 className="text-white">My Booking</h1>
-				</Container>
-			</div>
+		<section style={{ minHeight: '600px' }}>
 			<Container className="my-5">
+				<h1 className=" text-center generic-text-color2 py-3">Your bookings</h1>
 				{orders.length > 0 ? (
-					<Table className="rounded-3" striped bordered hover variant="dark">
+					<Table className="rounded-3" striped bordered hover variant="light">
 						<thead>
 							<tr>
-								<th>Author</th>
 								<th>Name</th>
-								<th>Email</th>
-								<th>TravelPlace</th>
-								<th>Booking Price</th>
+								<th>Place</th>
+								<th>Price</th>
 								<th>Date</th>
 								<th>Status</th>
 								<th>Action</th>
@@ -57,27 +51,18 @@ const MyOrders = () => {
 						</thead>
 						<tbody>
 							{orders.map((order) => (
-								<tr>
-									<td>
-										<img
-											width="50px"
-											className="rounded-circle bg-white"
-											src={order.author.photo}
-											alt=""
-										/>
-									</td>
+								<tr key={order._id}>
 									<td>
 										{order.author.name ? order.author.name : 'Not/available'}
 									</td>
-									<td>{order.email}</td>
 									<td>{order.place}</td>
 									<td>$ {order.price}</td>
 									<td>{order.date}</td>
 									<td>
 										<div
 											className={`bg-${
-												order.status === 'Cancelled' ? 'danger' : 'warning'
-											}  rounded fw-bold text-center`}
+												order.status === 'Approved' ? 'success' : 'warning'
+											} rounded fw-bold text-center`}
 										>
 											{order.status}
 										</div>
@@ -87,7 +72,10 @@ const MyOrders = () => {
 											<button
 												onClick={() => handleCancel(order._id)}
 												className="btn btn-danger w-75"
-												disabled={order.status === 'Cancelled'}
+												disabled={
+													order.status === 'Cancelled' ||
+													order.status === 'Approved'
+												}
 											>
 												Cancel
 											</button>
@@ -98,8 +86,8 @@ const MyOrders = () => {
 						</tbody>
 					</Table>
 				) : (
-					<h1 className="text-center fw-bold text-danger">
-						You have no order yet
+					<h1 className="text-center fw-bold generic-text-color">
+						No order found!!! Please place an order first.
 					</h1>
 				)}
 			</Container>

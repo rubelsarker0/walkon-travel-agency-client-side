@@ -7,14 +7,12 @@ import { useHistory } from 'react-router';
 const TravelDestinationCard = (props) => {
 	const {
 		_id,
-		travelPlace,
 		title,
 		description,
 		duration,
 		groupSize,
 		bookingPrice,
 		destinationUrl,
-		travelTime,
 	} = props.destination;
 
 	const history = useHistory();
@@ -32,7 +30,7 @@ const TravelDestinationCard = (props) => {
 					style={{ height: '250px' }}
 				/>
 				<Card.Body className="position-relative">
-					<Card.Title className="fs-5 ">{title}</Card.Title>
+					<Card.Title className="fs-5 generic-text-color2">{title}</Card.Title>
 					<Card.Text className="text-secondary">
 						{description.slice(0, 100)}
 					</Card.Text>

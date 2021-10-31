@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Card, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import DestinationCard from '../DestinationCard/DestinationCard';
 
 const Destination = () => {
@@ -19,7 +19,7 @@ const Destination = () => {
 				<div className="text-center">
 					<h1 className="generic-text-color2">OUR DESTINATION</h1>
 					<p className="text-secondary">
-						Trending, Best Selling Tours And Fun Destinations
+						Our most loving Tours and Destinations!!
 					</p>
 				</div>
 				{destinations && (
