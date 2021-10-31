@@ -7,7 +7,7 @@ import './Banner.css';
 const Banner = () => {
 	const history = useHistory();
 	const handleContact = () => {
-		history.push('/contact');
+		history.push('/allDestination');
 	};
 	return (
 		<section className="top-banner py-5">
@@ -31,7 +31,7 @@ const Banner = () => {
 								className="generic-btn-color rounded px-5"
 								size="lg"
 							>
-								Contact Us
+								EXPLORE PACKAGES
 							</Button>
 						</div>
 					</Col>

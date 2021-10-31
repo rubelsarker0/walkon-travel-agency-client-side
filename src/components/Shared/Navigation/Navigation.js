@@ -17,7 +17,7 @@ const Navigation = () => {
 			<Navbar expand="lg">
 				<Container>
 					<img
-						className="img-fluid"
+						className="img-fluid me-5"
 						src={logo}
 						alt=""
 						style={{ height: '28px', width: '131px' }}
@@ -37,6 +37,14 @@ const Navigation = () => {
 								exact
 								activeClassName="generic-text-color2"
 								className="nav-link"
+								to="/allDestination"
+							>
+								BROWSE DESTINATION
+							</NavLink>
+							<NavLink
+								exact
+								activeClassName="generic-text-color2"
+								className="nav-link"
 								to="/create/destination"
 							>
 								CREATE DESTINATION
@@ -45,17 +53,17 @@ const Navigation = () => {
 								exact
 								activeClassName="generic-text-color2"
 								className="nav-link"
-								to="/manageOrder"
+								to="/myOrders"
 							>
-								MANAGE ORDER
+								ORDERS
 							</NavLink>
 							<NavLink
 								exact
 								activeClassName="generic-text-color2"
 								className="nav-link"
-								to="/myOrders"
+								to="/manageOrder"
 							>
-								ORDERS
+								MANAGE ORDER
 							</NavLink>
 						</Nav>
 

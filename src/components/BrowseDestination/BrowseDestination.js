@@ -1,18 +1,19 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Spinner } from 'react-bootstrap';
-import DestinationCard from '../DestinationCard/DestinationCard';
+import { Spinner, Row, Container } from 'react-bootstrap';
+import DestinationCard from '../Home/DestinationCard/DestinationCard';
 
-const Destination = () => {
-	const [destinations, setDestinations] = useState([]);
+const BrowseDestination = () => {
+	const [browseDestinations, setBrowseDestinations] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
 		axios
 			.get('https://calm-woodland-45341.herokuapp.com/api/destinations')
 			.then((res) => {
-				setDestinations(res.data);
+				setBrowseDestinations(res.data);
 				setLoading(false);
+				console.log(res.data);
 			})
 			.catch((error) => console.log(error));
 	}, []);
@@ -24,6 +25,7 @@ const Destination = () => {
 			</div>
 		);
 	}
+
 	return (
 		<section className="py-5 bg-light">
 			<Container>
@@ -33,9 +35,9 @@ const Destination = () => {
 						Our most loving Tours and Destinations!!
 					</p>
 				</div>
-				{destinations && (
+				{browseDestinations && (
 					<Row lg={3} md={2} xs={1} className="g-4 py-4">
-						{destinations.slice(0, 6).map((destination) => (
+						{browseDestinations.map((destination) => (
 							<DestinationCard
 								key={destination._id}
 								destination={destination}
@@ -48,4 +50,4 @@ const Destination = () => {
 	);
 };
 
-export default Destination;
+export default BrowseDestination;

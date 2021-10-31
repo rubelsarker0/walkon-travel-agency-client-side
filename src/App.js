@@ -14,6 +14,7 @@ import PrivateRoute, {
 import Booking from './components/Booking/Booking';
 import ManageOrders from './components/ManageOrders/ManageOrders';
 import MyOrders from './components/MyOrders/MyOrders';
+import BrowseDestination from './components/BrowseDestination/BrowseDestination';
 
 function App() {
 	return (
@@ -32,6 +33,9 @@ function App() {
 					</AuthenticationPrivateRoute>
 					<Route path="/account/register">
 						<Register></Register>
+					</Route>
+					<Route path="/allDestination">
+						<BrowseDestination></BrowseDestination>
 					</Route>
 					<PrivateRoute path="/create/destination">
 						<AddDestination></AddDestination>

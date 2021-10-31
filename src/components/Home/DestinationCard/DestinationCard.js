@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
 
-const TravelDestinationCard = (props) => {
+const DestinationCard = (props) => {
 	const {
 		_id,
 		title,
@@ -78,4 +78,4 @@ const TravelDestinationCard = (props) => {
 	);
 };
 
-export default TravelDestinationCard;
+export default DestinationCard;
