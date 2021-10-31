@@ -10,7 +10,6 @@ const ManageOrders = () => {
 			.get(`http://localhost:5000/api/Orders`)
 			.then((res) => {
 				setOrders(res.data);
-				console.log(res.data);
 			})
 			.catch((err) => console.log(err));
 	}, [reCall]);
@@ -19,7 +18,6 @@ const ManageOrders = () => {
 		axios
 			.put(`http://localhost:5000/api/order/update/status/${id}`)
 			.then((res) => {
-				console.log(res);
 				if (res.data.modifiedCount > 0) {
 					setReCall(!reCall);
 				}
@@ -34,7 +32,6 @@ const ManageOrders = () => {
 			axios
 				.delete(`http://localhost:5000/api/order/delete/${id}`)
 				.then((res) => {
-					console.log(res);
 					if (res.data.deletedCount > 0) {
 						const newAllOrders = orders.filter((order) => order._id !== id);
 						setOrders(newAllOrders);
@@ -43,8 +40,6 @@ const ManageOrders = () => {
 				.catch((err) => console.log(err));
 		}
 	};
-
-	// /api/order/update/status/:id
 
 	return (
 		<section style={{ minHeight: '600px' }}>

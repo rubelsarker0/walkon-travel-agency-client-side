@@ -24,7 +24,6 @@ const MyOrders = () => {
 			axios
 				.put(`http://localhost:5000/api/order/cancel/${id}`)
 				.then((res) => {
-					console.log(res);
 					if (res.data.modifiedCount > 0) {
 						setLoad(!load);
 					}
