@@ -7,7 +7,7 @@ const ManageOrders = () => {
 	const [reCall, setReCall] = useState(true);
 	useEffect(() => {
 		axios
-			.get(`http://localhost:5000/api/Orders`)
+			.get(`https://calm-woodland-45341.herokuapp.com/api/Orders`)
 			.then((res) => {
 				setOrders(res.data);
 			})
@@ -16,7 +16,9 @@ const ManageOrders = () => {
 
 	const handleApproveOrder = (id) => {
 		axios
-			.put(`http://localhost:5000/api/order/update/status/${id}`)
+			.put(
+				`https://calm-woodland-45341.herokuapp.com/api/order/update/status/${id}`
+			)
 			.then((res) => {
 				if (res.data.modifiedCount > 0) {
 					setReCall(!reCall);
@@ -30,7 +32,9 @@ const ManageOrders = () => {
 		);
 		if (isDelete) {
 			axios
-				.delete(`http://localhost:5000/api/order/delete/${id}`)
+				.delete(
+					`https://calm-woodland-45341.herokuapp.com/api/order/delete/${id}`
+				)
 				.then((res) => {
 					if (res.data.deletedCount > 0) {
 						const newAllOrders = orders.filter((order) => order._id !== id);

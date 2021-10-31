@@ -11,7 +11,7 @@ const MyOrders = () => {
 
 	useEffect(() => {
 		axios
-			.get(`http://localhost:5000/api/Orders/${user.uid}`)
+			.get(`https://calm-woodland-45341.herokuapp.com/api/Orders/${user.uid}`)
 			.then((res) => {
 				setOrders(res.data);
 			})
@@ -22,7 +22,7 @@ const MyOrders = () => {
 		const isCancel = window.confirm('Are you sure?');
 		if (isCancel) {
 			axios
-				.put(`http://localhost:5000/api/order/cancel/${id}`)
+				.put(`https://calm-woodland-45341.herokuapp.com/api/order/cancel/${id}`)
 				.then((res) => {
 					if (res.data.modifiedCount > 0) {
 						setLoad(!load);

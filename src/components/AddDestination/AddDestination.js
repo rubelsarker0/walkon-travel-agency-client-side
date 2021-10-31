@@ -38,7 +38,10 @@ const AddDestination = () => {
 		};
 
 		axios
-			.post('http://localhost:5000/api/create/destinations', newDestination)
+			.post(
+				'https://calm-woodland-45341.herokuapp.com/api/create/destinations',
+				newDestination
+			)
 			.then((res) => {
 				if (res.data.insertedId) {
 					alert('Successfully added a new destination');

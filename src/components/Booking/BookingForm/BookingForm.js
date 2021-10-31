@@ -33,7 +33,10 @@ const BookingForm = ({ destination }) => {
 		};
 
 		axios
-			.post('http://localhost:5000/api/booking/newOrder', bookingData)
+			.post(
+				'https://calm-woodland-45341.herokuapp.com/api/booking/newOrder',
+				bookingData
+			)
 			.then((res) => {
 				if (res.data.insertedId) {
 					alert('Successfully Placed your booking order');

@@ -13,7 +13,7 @@ const Booking = () => {
 
 	useEffect(() => {
 		axios
-			.get(`http://localhost:5000/api/destinations/${id}`)
+			.get(`https://calm-woodland-45341.herokuapp.com/api/destinations/${id}`)
 			.then((res) => setDestination(res.data))
 			.catch((err) => console.log(err));
 	}, [id]);

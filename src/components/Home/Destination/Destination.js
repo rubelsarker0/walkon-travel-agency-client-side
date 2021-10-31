@@ -1,18 +1,29 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import DestinationCard from '../DestinationCard/DestinationCard';
 
 const Destination = () => {
 	const [destinations, setDestinations] = useState([]);
+	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
 		axios
-			.get('http://localhost:5000/api/destinations')
-			.then((res) => setDestinations(res.data))
+			.get('https://calm-woodland-45341.herokuapp.com/api/destinations')
+			.then((res) => {
+				setDestinations(res.data);
+				setLoading(false);
+			})
 			.catch((error) => console.log(error));
 	}, []);
 
+	if (isLoading) {
+		return (
+			<div className="text-center mx-auto py-5">
+				<Spinner animation="border" variant="primary" />
+			</div>
+		);
+	}
 	return (
 		<section className="py-5 bg-light">
 			<Container>
