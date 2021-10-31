@@ -39,7 +39,7 @@ const Navigation = () => {
 								className="nav-link"
 								to="/allDestination"
 							>
-								BROWSE DESTINATION
+								BROWSE
 							</NavLink>
 							<NavLink
 								exact
@@ -47,7 +47,7 @@ const Navigation = () => {
 								className="nav-link"
 								to="/create/destination"
 							>
-								CREATE DESTINATION
+								CREATE
 							</NavLink>
 							<NavLink
 								exact
@@ -63,7 +63,7 @@ const Navigation = () => {
 								className="nav-link"
 								to="/manageOrder"
 							>
-								MANAGE ORDER
+								MANAGE
 							</NavLink>
 						</Nav>
 
