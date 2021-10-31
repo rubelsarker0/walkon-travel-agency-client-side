@@ -43,7 +43,7 @@ Our core values provide people with an understanding of our ideals.
 
 # Site live url:
 
-- [x] https://walkon-d8971.web.app/home
+- [x] https://walkon-d8971.web.app
 
 > From the project directory run: -
 
